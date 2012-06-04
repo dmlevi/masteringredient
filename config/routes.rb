@@ -1,17 +1,6 @@
 Masteringredient::Application.routes.draw do
-  get "posts/index"
-
-  get "posts/show"
-
-  get "posts/new"
-
-  get "posts/edit"
-
-  get "posts/create"
-
-  get "posts/update"
-
-  get "posts/destroy"
+ 
+ resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
