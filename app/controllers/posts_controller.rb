@@ -1,5 +1,6 @@
-
 class PostsController < ApplicationController
+ before_filter :require_active_user
+ 
   def index
     @posts = Post.all
   end
@@ -36,4 +37,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
   end
+  
+  private
+
+    def require_active_user
+      redirect_to projects_path, alert: "An active account is required to perform the requested action." unless current_user.active?
+    end
 end
