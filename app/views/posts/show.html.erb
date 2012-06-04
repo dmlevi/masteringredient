@@ -1,3 +1,5 @@
 <h1>Your latest post</h1>
 <%= @post.description %>
 <%= link_to 'Edit this post', edit_post_path(@post) %>
+
+<%= image_tag @post.avatar.url(:medium) %>

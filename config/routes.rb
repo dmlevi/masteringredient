@@ -1,6 +1,6 @@
 Masteringredient::Application.routes.draw do
  
-  root to: "posts#index"
+  root to: "posts#new"
   
   devise_for :users
 
