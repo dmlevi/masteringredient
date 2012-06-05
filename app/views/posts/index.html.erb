@@ -1,7 +1,7 @@
 <h1>Recent Posts</h1>
 
 <ul><% @posts.each do |p| %>
-<li><%= p.description %></li>
+<li><%= link_to p.description, p %></li>
 <li><%= image_tag p.avatar.url(:medium) %></li>
 <% end %>
 </ul>
