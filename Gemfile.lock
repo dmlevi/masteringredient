@@ -68,6 +68,8 @@ GEM
       cocaine (>= 0.0.2)
       mime-types
     polyglot (0.3.3)
+    punchr (1.0.0)
+      typhoeus
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -108,6 +110,8 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    typhoeus (0.3.3)
+      mime-types
     tzinfo (0.3.33)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
@@ -123,6 +127,7 @@ DEPENDENCIES
   devise
   jquery-rails
   paperclip (~> 3.0)
+  punchr
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
   sqlite3
