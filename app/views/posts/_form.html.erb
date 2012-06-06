@@ -1,5 +1,8 @@
+<ul>
 <%= form_for(@post) do |f| %>
-<%= f.text_area :description %> 
-<%= f.file_field :avatar %><br />
+<li><%= f.text_field :title %></li>
+<li><%= f.text_area :description %> </li>
+<li><%= f.file_field :avatar %></li>
 <%= f.submit %>
 <% end %>
+</ul>
