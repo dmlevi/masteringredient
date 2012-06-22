@@ -1,7 +1,7 @@
 <ul>
 <%= form_for(@post) do |f| %>
-<li><%= f.text_field :title %></li>
-<li><%= f.text_area :description %> </li>
+<li><%= f.text_field :title, placeholder: "Title" %></li>
+<li><%= f.text_area :description, placeholder: "Describe your meal" %> </li>
 <li><%= f.file_field :avatar %></li>
 <%= f.submit %>
 <% end %>

@@ -1,5 +1,7 @@
 Masteringredient::Application.routes.draw do
- 
+   
+  resources :ingredients
+
   root to: "posts#index"
   
   devise_for :users

@@ -9,7 +9,6 @@
 <body>
 <%= notice %>
 <% if current_user %>
-<%= "Welcome, #{current_user.email}" %>
 <%= link_to "My Profile", edit_user_registration_path %>
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <%= link_to "Create New Master Ingredient", new_post_path %>
