@@ -8,6 +8,10 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
   end
   
+  def show
+    @ingredient = Ingredient.find(params[:id])
+  end
+  
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     if @ingredient.save
