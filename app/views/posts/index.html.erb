@@ -1,7 +1,14 @@
-<h1>Master Ingredient of the week</h1>
+<div class="page-header">
+  <h2>Master Ingredient of the week</h2>
+</div>
 
-<ul><% @posts.each do |p| %>
-<li><%= link_to p.title, p %></li>
-<li><%= image_tag p.avatar.url(:medium) %></li>
+<% @posts.each do |p| %>
+<div class="image">
+  <ul>
+    <li><%= image_tag p.avatar.url(:medium) %></li>
+    <label id="image_dt"><span class="spacer"><%= link_to p.title, p %></span></label>
+  </ul>
+</div>
+
 <% end %>
-</ul>
+

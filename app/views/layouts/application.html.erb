@@ -7,15 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= notice %>
-<% if current_user %>
-<%= link_to "My Profile", edit_user_registration_path %>
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<%= link_to "Create New Master Ingredient", new_post_path %>
-<%= link_to "Current Master Ingredients", posts_path %>
-<% end %>
-
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container"> 
+        <a href="http://localhost:3000/" class="brand"> Master Ingredient </a>  
+        <% if current_user %>
+        <ul class="nav">       
+        <li> <%= link_to "My Profile", edit_user_registration_path %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+        <% else %>
+        <ul class="nav">        
+          <li><%= link_to "Sign In", user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="container">
+  <%= notice %>
+  <%= link_to "Create New Master Ingredient", new_post_path, class: :btn %>
 <%= yield %>
-
+</div>
 </body>
 </html>

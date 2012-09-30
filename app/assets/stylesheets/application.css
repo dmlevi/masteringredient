@@ -12,6 +12,47 @@
  *= require_tree .
  */
 
-ul {
+
+body {
+     padding-top: 40px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#image_dt ul {
+    list-style: none;
+}
+
+#image_dt { 
+   position: absolute; 
+   bottom: 0; 
+   margin-bottom: 0;
+   left: center;
+}
+
+#image_dt span { 
+   font-size: 20px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+#image_dt span.spacer {
+   padding: 5px;
+}
+
+#image_dt span a {
+    color: white;
+}
+
+.image li {
+    float:left;
     list-style: none;
 }
